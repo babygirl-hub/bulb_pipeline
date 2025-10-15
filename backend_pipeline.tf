@@ -179,7 +179,7 @@ resource "aws_codepipeline" "queen_backend_pipeline" {
  
       configuration = {
         Owner          = "babygirl-hub"
-        Repo           = "bulb_pipeline"
+        Repo           = "farm-stack-backend"
         Branch         = "main"
         OAuthToken     =   data.aws_ssm_parameter.quuen_github_token.value
       }
