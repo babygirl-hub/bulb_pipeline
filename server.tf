@@ -100,6 +100,9 @@ resource "aws_instance" "queen_backend_server" {
   subnet_id              = aws_subnet.queen_public_subnet.id
   vpc_security_group_ids = [aws_security_group.queen_backend_sg.id]
   key_name               = "new-keypair"
+  tags = {
+    Name        = "queeen_Backend_Server"
+  }
  
   user_data = <<EOF
 #!/bin/bash
@@ -159,6 +162,9 @@ resource "aws_instance" "queen_frontend_server" {
   subnet_id              = aws_subnet.queen_public_subnet.id
   vpc_security_group_ids = [aws_security_group.queen_frontend_sg.id]
   key_name = "new-keypair"
+  tags = {
+    Name        = "queen_frontend_Server"
+  }
  
   user_data = <<EOF
 #!/bin/bash
