@@ -1,6 +1,4 @@
-provider "aws" {
-    region = "us-east-1"
-}
+
  
 resource "aws_s3_bucket" "queen_frontend_codepipeline_artifact_bucket" {
   bucket = "queen-frontend-codepipeline-artifact-bucket"
